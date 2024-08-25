@@ -15,19 +15,19 @@ fun AppNavigation(
     navController: NavHostController,
     selectedItem: MutableState<String?>
 ) {
-    NavHost(navController = navController, startDestination = "itemList") {
-        composable("itemList") {
-            MyStringList(navController, selectedItem.value) { item ->
-                selectedItem.value = item
-                navController.navigate("itemDetail/$item")
-            }
-        }
-        composable(
-            route = "itemDetail/{itemName}",
-            arguments = listOf(navArgument("itemName") { type = NavType.StringType })
-        ) { backStackEntry ->
-            val itemName = backStackEntry.arguments?.getString("itemName")
-            ItemDetailScreen(itemName ?: "Unknown Item", navController)
-        }
-    }
+//    NavHost(navController = navController, startDestination = "itemList") {
+//        composable("itemList") {
+//            MyStringList(navController, selectedItem.value) { item ->
+//                selectedItem.value = item
+//                navController.navigate("itemDetail/$item")
+//            }
+//        }
+//        composable(
+//            route = "itemDetail/{itemName}",
+//            arguments = listOf(navArgument("itemName") { type = NavType.StringType })
+//        ) { backStackEntry ->
+//            val itemName = backStackEntry.arguments?.getString("itemName")
+//            ItemDetailScreen(itemName ?: "Unknown Item", navController)
+//        }
+//    }
 }
