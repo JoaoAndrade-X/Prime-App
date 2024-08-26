@@ -37,9 +37,9 @@ fun MyStringList(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp)
-                    .clickable {
-                        onItemClick(item)
-                    }
+//                    .clickable {
+//                        onItemClick(item)
+//                    }
             ) {
                 Text(
                     text = item,
@@ -48,7 +48,7 @@ fun MyStringList(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(vertical = 8.dp)
-                        .background(if (isSelected) Color.Green else Color.Transparent)
+                        //.background(if (isSelected) Color.Green else Color.Transparent)
                 )
                 if (index < items.size - 1) {
                     Divider(
